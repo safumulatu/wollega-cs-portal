@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wollega University | CS Department 3rd yr</title>
+    <meta
+      name="description"
+      content="Student portal and resource hub for the Computer Science Department, Wollega University, Nekemte Main Campus."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Skip link for accessibility ===== -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- ===== Sticky Header ===== -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">WU</span>
+          <div class="brand-text">
+            <span class="brand-title">Wollega University</span>
+            <span class="brand-subtitle">CS Department 3rd yr</span>
+          </div>
+        </div>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="site-nav" id="primaryNav" aria-label="Primary">
+          <ul>
+            <li><a href="#home" class="nav-link is-active">Home</a></li>
+            <li><a href="#courses" class="nav-link">Courses</a></li>
+            <li><a href="#materials" class="nav-link">Materials</a></li>
+            <li><a href="#study-groups" class="nav-link">Study Groups</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ===== Hero Section ===== -->
+      <section class="hero" id="home">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">
+            Nekemte Main Campus &middot; Department of Computer Science
+          </p>
+          <h1 class="hero-title">
+            A single home base for your third and fourth year in CS.
+          </h1>
+          <p class="hero-lede">
+            Find your course outlines, past exams, and lecture notes in one
+            place &mdash; and connect with classmates who are studying the same
+            topics you are.
+          </p>
+          <div class="hero-actions">
+            <a href="#courses" class="btn btn-primary">Browse the curriculum</a>
+            <a href="#study-groups" class="btn btn-ghost">Find a study group</a>
+          </div>
+          <dl class="hero-stats">
+            <div class="hero-stat">
+              <dt>Active tracks</dt>
+              <dd>3rd &amp; 4th year</dd>
+            </div>
+            <div class="hero-stat">
+              <dt>Core courses listed</dt>
+              <dd>8</dd>
+            </div>
+            <div class="hero-stat">
+              <dt>Archived materials</dt>
+              <dd>6 sets</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ===== Curriculum & Course Grid ===== -->
+      <section class="section" id="courses">
+        <div class="section-inner">
+          <div class="section-heading">
+            <h2>Curriculum &amp; course grid</h2>
+            <p>
+              Core subjects for the CS program at Nekemte campus. Filter by year
+              to see what's on your plate this semester.
+            </p>
+          </div>
+
+          <div
+            class="filter-bar"
+            role="group"
+            aria-label="Filter courses by year"
+          >
+            <button
+              class="filter-btn is-active"
+              data-filter="all"
+              type="button"
+            >
+              All courses
+            </button>
+            <button class="filter-btn" data-filter="year3" type="button">
+              3rd Year
+            </button>
+            <button class="filter-btn" data-filter="year4" type="button">
+              4th Year
+            </button>
+          </div>
+
+          <p class="filter-status" id="filterStatus" aria-live="polite">
+            Showing all 8 courses
+          </p>
+
+          <div class="course-grid" id="courseGrid">
+            <article class="course-card" data-year="year3">
+              <div class="course-card-top">
+                <span class="course-code">CoSc 3102</span>
+                <span class="course-tag">3rd Year</span>
+              </div>
+              <h3>Microprocessor Architecture</h3>
+              <p>
+                Instruction sets, addressing modes, assembly programming, and
+                the ARM/x86 processor pipeline.
+              </p>
+              <div class="course-meta">
+                <span>Credit hours: 4</span>
+                <span>Semester: I</span>
+              </div>
+            </article>
+
+            <article class="course-card" data-year="year3">
+              <div class="course-card-top">
+                <span class="course-code">CoSc 3121</span>
+                <span class="course-tag">3rd Year</span>
+              </div>
+              <h3>Formal Languages &amp; Automata</h3>
+              <p>
+                Regular expressions, finite automata, context-free grammars, and
+                an introduction to Turing machines.
+              </p>
+              <div class="course-meta">
+                <span>Credit hours: 3</span>
+                <span>Semester: I</span>
+              </div>
+            </article>
+
+            <article class="course-card" data-year="year3">
+              <div class="course-card-top">
+                <span class="course-code">CoSc 3132</span>
+                <span class="course-tag">3rd Year</span>
+              </div>
+              <h3>Database Systems II</h3>
+              <p>
+                Normalization, transaction management, query optimization, and
+                distributed database concepts.
+              </p>
+              <div class="course-meta">
+                <span>Credit hours: 4</span>
+                <span>Semester: II</span>
+              </div>
+            </article>
+
+            <article class="course-card" data-year="year3">
+              <div class="course-card-top">
+                <span class="course-code">CoSc 3141</span>
+                <span class="course-tag">3rd Year</span>
+              </div>
+              <h3>Computer Networks</h3>
+              <p>
+                The OSI and TCP/IP models, routing fundamentals, and network
+                security basics.
+              </p>
+              <div class="course-meta">
+                <span>Credit hours: 3</span>
+                <span>Semester: II</span>
+              </div>
+            </article>
+
+            <article class="course-card" data-year="year4">
+              <div class="course-card-top">
+                <span class="course-code">CoSc 4101</span>
+                <span class="course-tag">4th Year</span>
+              </div>
+              <h3>Software Engineering</h3>
+              <p>
+                Requirements analysis, software design patterns, agile
+                methodology, and team-based project delivery.
+              </p>
+              <div class="course-meta">
+                <span>Credit hours: 4</span>
+                <span>Semester: I</span>
+              </div>
+            </article>
+
+            <article class="course-card" data-year="year4">
+              <div class="course-card-top">
+                <span class="course-code">CoSc 4112</span>
+                <span class="course-tag">4th Year</span>
+              </div>
+              <h3>Operating Systems</h3>
+              <p>
+                Process scheduling, memory management, file systems, and
+                concurrency &amp; synchronization.
+              </p>
+              <div class="course-meta">
+                <span>Credit hours: 4</span>
+                <span>Semester: I</span>
+              </div>
+            </article>
+
+            <article class="course-card" data-year="year4">
+              <div class="course-card-top">
+                <span class="course-code">CoSc 4123</span>
+                <span class="course-tag">4th Year</span>
+              </div>
+              <h3>Artificial Intelligence</h3>
+              <p>
+                Search strategies, knowledge representation, machine learning
+                foundations, and expert systems.
+              </p>
+              <div class="course-meta">
+                <span>Credit hours: 3</span>
+                <span>Semester: II</span>
+              </div>
+            </article>
+
+            <article class="course-card" data-year="year4">
+              <div class="course-card-top">
+                <span class="course-code">CoSc 4199</span>
+                <span class="course-tag">4th Year</span>
+              </div>
+              <h3>Senior Project II</h3>
+              <p>
+                Final implementation, testing, and defense of the capstone
+                project in front of the department panel.
+              </p>
+              <div class="course-meta">
+                <span>Credit hours: 6</span>
+                <span>Semester: II</span>
+              </div>
+            </article>
+          </div>
+
+          <p class="empty-state" id="emptyState" hidden>
+            No courses match this filter yet. Check back next semester.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== Past Exams & Materials Repository ===== -->
+      <section class="section section-alt" id="materials">
+        <div class="section-inner">
+          <div class="section-heading">
+            <h2>Past exams &amp; materials repository</h2>
+            <p>
+              Lecture notes and past exam papers shared by department staff and
+              senior students. Review before you rely &mdash; contents are
+              provided as study aids only.
+            </p>
+          </div>
+
+          <div class="archive-grid">
+            <article class="archive-card">
+              <div class="archive-icon" aria-hidden="true">&#128196;</div>
+              <div class="archive-body">
+                <span class="archive-type">Lecture notes</span>
+                <h3>Operating Systems &ndash; Chapter 1&ndash;5 notes</h3>
+                <p>
+                  Process management through deadlock handling, compiled from
+                  the 2025 lecture series.
+                </p>
+                <div class="archive-meta">
+                  <span>PDF &middot; 2.1 MB</span>
+                  <span>Updated: Feb 2026</span>
+                </div>
+              </div>
+              <div class="archive-actions">
+                <button
+                  class="btn btn-small btn-outline"
+                  type="button"
+                  data-action="view"
+                >
+                  View
+                </button>
+                <button
+                  class="btn btn-small btn-primary"
+                  type="button"
+                  data-action="download"
+                >
+                  Download
+                </button>
+              </div>
+            </article>
+
+            <article class="archive-card">
+              <div class="archive-icon" aria-hidden="true">&#128221;</div>
+              <div class="archive-body">
+                <span class="archive-type">Past exam</span>
+                <h3>Formal Languages &amp; Automata &ndash; 2024 final</h3>
+                <p>
+                  Full final exam paper with the marking scheme, from the
+                  previous academic year.
+                </p>
+                <div class="archive-meta">
+                  <span>PDF &middot; 640 KB</span>
+                  <span>Updated: Jan 2025</span>
+                </div>
+              </div>
+              <div class="archive-actions">
+                <button
+                  class="btn btn-small btn-outline"
+                  type="button"
+                  data-action="view"
+                >
+                  View
+                </button>
+                <button
+                  class="btn btn-small btn-primary"
+                  type="button"
+                  data-action="download"
+                >
+                  Download
+                </button>
+              </div>
+            </article>
+
+            <article class="archive-card">
+              <div class="archive-icon" aria-hidden="true">&#128196;</div>
+              <div class="archive-body">
+                <span class="archive-type">Lecture notes</span>
+                <h3>Microprocessor Architecture &ndash; assembly lab guide</h3>
+                <p>
+                  Worked examples for addressing modes and a walkthrough of the
+                  ARM instruction set.
+                </p>
+                <div class="archive-meta">
+                  <span>PDF &middot; 1.4 MB</span>
+                  <span>Updated: Mar 2026</span>
+                </div>
+              </div>
+              <div class="archive-actions">
+                <button
+                  class="btn btn-small btn-outline"
+                  type="button"
+                  data-action="view"
+                >
+                  View
+                </button>
+                <button
+                  class="btn btn-small btn-primary"
+                  type="button"
+                  data-action="download"
+                >
+                  Download
+                </button>
+              </div>
+            </article>
+
+            <article class="archive-card">
+              <div class="archive-icon" aria-hidden="true">&#128221;</div>
+              <div class="archive-body">
+                <span class="archive-type">Past exam</span>
+                <h3>Software Engineering &ndash; 2024 midterm</h3>
+                <p>
+                  Midterm questions covering requirements analysis and design
+                  pattern selection.
+                </p>
+                <div class="archive-meta">
+                  <span>PDF &middot; 380 KB</span>
+                  <span>Updated: Nov 2024</span>
+                </div>
+              </div>
+              <div class="archive-actions">
+                <button
+                  class="btn btn-small btn-outline"
+                  type="button"
+                  data-action="view"
+                >
+                  View
+                </button>
+                <button
+                  class="btn btn-small btn-primary"
+                  type="button"
+                  data-action="download"
+                >
+                  Download
+                </button>
+              </div>
+            </article>
+
+            <article class="archive-card">
+              <div class="archive-icon" aria-hidden="true">&#128196;</div>
+              <div class="archive-body">
+                <span class="archive-type">Lecture notes</span>
+                <h3>Database Systems II &ndash; normalization slides</h3>
+                <p>
+                  Slide deck covering 1NF through BCNF with worked decomposition
+                  examples.
+                </p>
+                <div class="archive-meta">
+                  <span>PDF &middot; 950 KB</span>
+                  <span>Updated: Apr 2026</span>
+                </div>
+              </div>
+              <div class="archive-actions">
+                <button
+                  class="btn btn-small btn-outline"
+                  type="button"
+                  data-action="view"
+                >
+                  View
+                </button>
+                <button
+                  class="btn btn-small btn-primary"
+                  type="button"
+                  data-action="download"
+                >
+                  Download
+                </button>
+              </div>
+            </article>
+
+            <article class="archive-card">
+              <div class="archive-icon" aria-hidden="true">&#128221;</div>
+              <div class="archive-body">
+                <span class="archive-type">Past exam</span>
+                <h3>Computer Networks &ndash; 2023 final</h3>
+                <p>
+                  Final exam paper covering the OSI model, subnetting, and
+                  routing protocols.
+                </p>
+                <div class="archive-meta">
+                  <span>PDF &middot; 510 KB</span>
+                  <span>Updated: Jan 2024</span>
+                </div>
+              </div>
+              <div class="archive-actions">
+                <button
+                  class="btn btn-small btn-outline"
+                  type="button"
+                  data-action="view"
+                >
+                  View
+                </button>
+                <button
+                  class="btn btn-small btn-primary"
+                  type="button"
+                  data-action="download"
+                >
+                  Download
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Study Group Finder ===== -->
+      <section class="section" id="study-groups">
+        <div class="section-inner section-inner-narrow">
+          <div class="section-heading">
+            <h2>Study group finder</h2>
+            <p>
+              Tell us what you're studying and we'll help match you with
+              classmates working on the same topic.
+            </p>
+          </div>
+
+          <form class="study-form" id="studyForm" novalidate>
+            <div class="form-row">
+              <label for="fullName">Full name</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="e.g. Safu Mulatu"
+                autocomplete="name"
+              />
+              <p class="field-error" id="fullNameError" role="alert"></p>
+            </div>
+
+            <div class="form-row">
+              <label for="studentId">Student ID</label>
+              <input
+                type="text"
+                id="studentId"
+                name="studentId"
+                placeholder="e.g. WU1601958"
+                autocomplete="off"
+              />
+              <p class="field-hint">
+                Format: two or three letters, a slash, digits, a slash, and a
+                two-digit year &mdash; like WU/1234/15.
+              </p>
+              <p class="field-error" id="studentIdError" role="alert"></p>
+            </div>
+
+            <div class="form-row">
+              <label for="majorYear">Major &amp; year</label>
+              <select id="majorYear" name="majorYear">
+                <option value="" selected disabled>Select your year</option>
+                <option value="cs-3">Computer Science &ndash; 3rd Year</option>
+                <option value="cs-4">Computer Science &ndash; 4th Year</option>
+              </select>
+              <p class="field-error" id="majorYearError" role="alert"></p>
+            </div>
+
+            <div class="form-row">
+              <label for="studyTopic">Preferred study topic</label>
+              <input
+                type="text"
+                id="studyTopic"
+                name="studyTopic"
+                placeholder="e.g. Operating Systems &ndash; deadlock handling"
+                autocomplete="off"
+              />
+              <p class="field-error" id="studyTopicError" role="alert"></p>
+            </div>
+
+            <div class="form-row">
+              <label for="contact"
+                >Email or phone
+                <span class="label-optional">(optional)</span></label
+              >
+              <input
+                type="text"
+                id="contact"
+                name="contact"
+                placeholder="e.g. safumulatu9@gmail.com or 0925769787"
+                autocomplete="email"
+              />
+              <p class="field-error" id="contactError" role="alert"></p>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                Register for a study group
+              </button>
+            </div>
+
+            <div
+              class="form-feedback"
+              id="formFeedback"
+              role="status"
+              aria-live="polite"
+            ></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-block">
+          <span class="brand-mark" aria-hidden="true">WU</span>
+          <p>
+            Department of Computer Science<br />Wollega University &mdash;
+            Nekemte Main Campus
+          </p>
+        </div>
+        <div class="footer-block">
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="#courses">Curriculum</a></li>
+            <li><a href="#materials">Materials repository</a></li>
+            <li><a href="#study-groups">Study groups</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Department office</h3>
+          <p>
+            Nekemte, Oromia, Ethiopia<br />Office hours: Mon&ndash;Fri,
+            8:30&ndash;12:30 &amp; 1:30&ndash;5:30
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year"></span> Wollega University, CS Department.
+          Built for internal student use.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
